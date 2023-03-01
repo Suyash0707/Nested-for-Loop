@@ -1,4 +1,5 @@
 ﻿
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Xml.Schema;
 
@@ -9,6 +10,7 @@ public class program
         pattern1();
         pattern2();
         pattern3();
+        SetLimit();
 
     static void pattern1()
         {
@@ -47,6 +49,23 @@ public class program
                 Console.WriteLine();
             }
             Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        }
+
+    static void SetLimit()
+        {
+            Console.WriteLine("Please Enter Limit");
+            string str = Console.ReadLine();
+            int limit = Convert.ToInt32(str);
+
+            for(int i = 1; i <= limit; i++)
+            {
+                for(int j =1; j<= limit; j++)
+                {
+                    Console.Write(j+"");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         }
     }
 }
